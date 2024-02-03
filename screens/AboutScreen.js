@@ -1,10 +1,13 @@
-import { View, Text, StyleSheet } from 'react-native'
-import React from 'react'
+import { View, Text, StyleSheet, Button } from 'react-native'
+import { useNavigation } from '@react-navigation/native'
 
 export default function AboutScreen() {
+  const navigation = useNavigation()
+
   return (
     <View style={styles.container}>
       <Text style={styles.text}>AboutScreen</Text>
+      <Button title="Go To Home" onPress={() => navigation.navigate('Home')} />
     </View>
   )
 }
